@@ -1,0 +1,718 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>合格证信息验证</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin: 0 auto;
+      font-size: 12px;
+    }
+
+    ul {
+      padding-inline-start: 0px;
+      margin-block-start: 2px;
+      margin-block-end: 2px;
+    }
+
+    .padd_start {
+      padding-inline-start: 13px;
+    }
+
+    ul li {
+      list-style: none;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .text_center {
+      text-align: center;
+    }
+
+    .font_title {
+      /* font-size: medium; */
+      font-weight: bolder;
+    }
+
+    .font_smtile {
+      font-size: small;
+      font-weight: bolder;
+    }
+
+    .font_weight {
+      font-weight: bold;
+    }
+
+    table td,
+    table th {
+      border: 1px solid rgb(173, 172, 172);
+      color: #666;
+      height: 20px;
+    }
+
+    .back_color {
+      background-color: RGB(193, 210, 240);
+    }
+
+    .back_LtGray {
+      background-color: rgb(228, 227, 227);
+    }
+
+    .item_img {
+      margin-top: 3px;
+      width: 100px;
+    }
+  </style>
+</head>
+<!-- http://localhost:8080/api/v1/association/get_certificate_info?certificate_id=%E6%B5%99%E8%B4%A8%E6%A3%80023375 -->
+<body class="vsc-initialized">
+  <div>
+    <!-- 基本信息 -->
+    <table style="table-layout: fixed;margin-bottom: 2px;" border="1" width="100%" cellspacing="0" cellpadding="2">
+      <tbody>
+        <tr>
+          <td class="back_color text_center font_title" style="width: 85px;">证书编号</td>
+          <td colspan="5">浙质检009968</td>
+        </tr>
+        <tr>
+          <td class="back_color text_center font_title" style="width: 85px;">姓名</td>
+          <td colspan="5">洪晓东</td>
+        </tr>
+        <tr>
+          <td class="back_color text_center font_title" style="width: 85px;">性别</td>
+          <td colspan="5">男</td>
+        </tr>
+        <tr>
+          <td class="back_color text_center font_title" style="width: 85px;">身份证号码</td>
+          <td colspan="5">330381198609257517</td>
+        </tr>
+        <tr>
+          <td class="back_color text_center font_title" style="width: 85px;">现从业机构</td>
+          <td colspan="5">浙江辰旭检测科技有限公司</td>
+        </tr>
+        <tr>
+          <td class="back_color text_center font_title" style="width: 85px;">现从业地址</td>
+          <td colspan="5">温州市经济技术开发区甬江路66号A幢一层东侧</td>
+        </tr>
+        <!-- 
+        <tr>
+          <td class="back_color text_center font_title" style="color: #aa2222; width: 85px;">继续教育情况</td>
+          <td colspan="5">已获得3学分，请于2028-09-01之前完成9学分</td>
+        </tr>
+         -->
+      </tbody>
+    </table>
+    <!-- 从业机构变更记录 -->
+    <table style="table-layout: fixed;margin-bottom: 2px;" border="1" width="100%" cellspacing="0" cellpadding="2">
+      <thead class="toggle-btn" data-target="work_institution_change_record" data-original-text="从业机构变更记录">
+        <tr class="back_color text_center font_title">
+          <th colspan="6">从业机构变更记录<span style="color:blue;"> (点击展开)</span></th>
+        </tr>     
+      </thead>
+      <tbody id="work_institution_change_record" style="display: none;">      
+        <tr class="back_LtGray text_center font_smtile">
+          <td>
+            <span>变更日期</span><br>
+            <span>变更类型</span>
+          </td>
+          <td colspan="5">原从业机构及现从业机构</td>
+        </tr>
+        
+        <tr>
+          <td class="text_center">
+            <span>2009-05-01</span><br>
+            <span>人员流动</span>
+          </td>
+          <td colspan="5">
+            <span class="font_weight">原从业机构:</span>
+            <span></span><br>
+            <span class="font_weight">现从业机构:</span>
+            <span>温州市大伟公路检测有限公司</span>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="text_center">
+            <span>2015-12-01</span><br>
+            <span>人员流动</span>
+          </td>
+          <td colspan="5">
+            <span class="font_weight">原从业机构:</span>
+            <span>温州市大伟公路检测有限公司</span><br>
+            <span class="font_weight">现从业机构:</span>
+            <span>温州市正诚工程质量检测有限公司</span>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="text_center">
+            <span>2019-08-26</span><br>
+            <span>人员流动</span>
+          </td>
+          <td colspan="5">
+            <span class="font_weight">原从业机构:</span>
+            <span>温州市正诚工程质量检测有限公司</span><br>
+            <span class="font_weight">现从业机构:</span>
+            <span>温州中旭建设工程质量检测中心有限公司</span>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="text_center">
+            <span>2022-12-07</span><br>
+            <span>整体变更</span>
+          </td>
+          <td colspan="5">
+            <span class="font_weight">原从业机构:</span>
+            <span>温州中旭建设工程质量检测中心有限公司</span><br>
+            <span class="font_weight">现从业机构:</span>
+            <span>浙江辰旭检测科技有限公司</span>
+          </td>
+        </tr>
+         
+      </tbody>
+    </table>
+    <!-- 从业场所变更记录 -->
+    <table style="table-layout: fixed;margin-bottom: 2px;" border="1" width="100%" cellspacing="0" cellpadding="2">
+      <thead class="toggle-btn" data-target="work_place_change_record" data-original-text="从业场所变更记录">
+        <tr class="back_color text_center font_title">
+          <th colspan="6" "="">从业场所变更记录 <span style="color:blue;">(点击展开)</span></th>
+        </tr>
+        
+      </thead>
+      <tbody id="work_place_change_record" style="display:none;">  
+        <tr class="back_LtGray text_center font_smtile">
+          <td>
+            <span>变更日期</span>
+          </td>
+          <td colspan="5">原从业场所及现从业场所</td>
+        </tr> 
+        
+        <tr>
+          <td class="text_center">
+            <span>2015-12-01</span>
+          </td>
+          <td colspan="5">
+            <span class="font_weight">原从业场所:</span>
+            <span></span><br>
+            <span class="font_weight">现从业场所:</span>
+            <span>浙江省温州市龙湾区蒲州街道兴平路27号第1-3层</span>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="text_center">
+            <span>2019-08-26</span>
+          </td>
+          <td colspan="5">
+            <span class="font_weight">原从业场所:</span>
+            <span>浙江省温州市龙湾区蒲州街道兴平路27号第1-3层</span><br>
+            <span class="font_weight">现从业场所:</span>
+            <span>温州市宽带路13号德丰综合大楼A幢201室南首</span>
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+    <!-- 专业类别记录 -->
+    <table style="table-layout: fixed;margin-bottom: 2px;" border="1" width="100%" cellspacing="0" cellpadding="2">
+      <thead class="toggle-btn" data-target="subject_type_record" data-original-text="专业类别记录">
+        <tr class="back_color text_center font_title">
+          <th colspan="6">专业类别记录<span style="color:blue;">
+            (点击收起)
+          </span></th>
+        </tr>
+        
+      </thead>
+      <tbody id="subject_type_record" style="display:table-row-group;">
+        <!-- 发证记录 -->
+        <tr class="back_LtGray text_center font_smtile">
+          <td>
+            <span>发证日期</span>
+          </td>
+          <td colspan="1">专业类别</td>
+          <td colspan="1">发证类型</td>
+          <td colspan="2">实操考核</td>
+          <td colspan="1">证书状态</td>
+        </tr>
+        
+        <tr>
+          <td class="text_center">
+            <span>2024-08-21</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">建筑节能B</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">承诺制</span>
+          </td>
+          <td colspan="2" class="text_center">
+            <span class="font_weight">合格</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">正常</span>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="text_center">
+            <span>2025-03-20</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">建筑节能A</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">承诺制</span>
+          </td>
+          <td colspan="2" class="text_center">
+            <span class="font_weight">合格</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">正常</span>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="text_center">
+            <span>2025-03-20</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">建筑幕墙A</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">承诺制</span>
+          </td>
+          <td colspan="2" class="text_center">
+            <span class="font_weight">合格</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">正常</span>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="text_center">
+            <span>2024-08-21</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">建筑幕墙B</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">承诺制</span>
+          </td>
+          <td colspan="2" class="text_center">
+            <span class="font_weight">合格</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">正常</span>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="text_center">
+            <span>2024-04-09</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">桥梁及地下工程</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">非承诺制</span>
+          </td>
+          <td colspan="2" class="text_center">
+            <span class="font_weight"></span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">正常</span>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="text_center">
+            <span>2024-04-09</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">钢结构</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">非承诺制</span>
+          </td>
+          <td colspan="2" class="text_center">
+            <span class="font_weight"></span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">正常</span>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="text_center">
+            <span>2024-04-09</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">地基基础</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">非承诺制</span>
+          </td>
+          <td colspan="2" class="text_center">
+            <span class="font_weight"></span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">正常</span>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="text_center">
+            <span>2024-04-09</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">主体结构及装饰装修（室内环境）</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">非承诺制</span>
+          </td>
+          <td colspan="2" class="text_center">
+            <span class="font_weight"></span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">正常</span>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="text_center">
+            <span>2024-04-09</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">主体结构及装饰装修（主体结构）</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">非承诺制</span>
+          </td>
+          <td colspan="2" class="text_center">
+            <span class="font_weight"></span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">正常</span>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="text_center">
+            <span>2024-04-09</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">道路工程</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">非承诺制</span>
+          </td>
+          <td colspan="2" class="text_center">
+            <span class="font_weight"></span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">正常</span>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="text_center">
+            <span>2024-04-09</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">市政工程材料</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">非承诺制</span>
+          </td>
+          <td colspan="2" class="text_center">
+            <span class="font_weight"></span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">正常</span>
+          </td>
+        </tr>
+        
+        <tr>
+          <td class="text_center">
+            <span>2024-04-09</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">建筑材料及构配件</span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">非承诺制</span>
+          </td>
+          <td colspan="2" class="text_center">
+            <span class="font_weight"></span>
+          </td>
+          <td colspan="1" class="text_center">
+            <span class="font_weight">正常</span>
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+    <!-- 继续教育（培训）记录 -->
+    <table style="table-layout: fixed;margin-bottom: 2px;" border="1" width="100%" cellspacing="0" cellpadding="2">
+      <thead class="toggle-btn" data-target="next_education_record" data-original-text="继续教育（培训）记录">
+        <tr class="back_color text_center font_title">
+          <th colspan="6">继续教育（培训）记录<span style="color:blue;">(点击展开)</span></th>
+        </tr>
+        
+      </thead>
+      <tbody id="next_education_record" style="display:none;">
+        <tr class="back_LtGray text_center font_smtile">
+          <td>
+            <span>日期</span>
+          </td>
+          <td colspan="5">
+            <span>继续教育结果</span>
+          </td>
+        </tr>
+        
+        <tr>
+          
+        </tr>
+        
+        <tr>
+          
+        </tr>
+        
+        <tr>
+          
+        </tr>
+        
+        <tr>
+          
+        </tr>
+        
+        <tr>
+          
+        </tr>
+        
+        <tr>
+          
+        </tr>
+        
+        <tr>
+          
+        </tr>
+        
+        <tr>
+          
+        </tr>
+        
+        <tr>
+          
+        </tr>
+        
+        <tr>
+          
+          <td class="text_center">
+            <span>2025-11-12</span>
+          </td>
+          <!--  -->
+          <td colspan="5" class="text_center">
+            <span>完成技能专题培训，获得3学分</span>
+          </td>
+          
+        </tr>
+        
+      </tbody>
+    </table>
+    <!-- 变更记录汇总 -->
+    <table style="table-layout: fixed;margin-bottom: 2px;" border="1" width="100%" cellspacing="0" cellpadding="2">
+      <thead class="toggle-btn" data-target="change_record_collection" data-original-text="变更记录汇总">
+        <tr class="back_color text_center font_title">
+          <td colspan="6">变更记录汇总<span style="color:blue;">(点击展开)</span></td>
+        </tr>     
+      </thead>
+      <tbody id="change_record_collection" style="display:none;"> 
+        <tr class="back_LtGray text_center font_smtile">
+          <td>
+            <span>变更日期</span>
+          </td>
+          <td colspan="5">
+            <span>变更内容</span>
+          </td>
+        </tr>  
+        
+          <tr>
+            <td class="text_center">
+              <span>2009年05月01日</span>
+            </td>
+            <td colspan="5">人员流动：由  变更为 温州市大伟公路检测有限公司</td>
+          </tr>
+        
+          <tr>
+            <td class="text_center">
+              <span>2015年12月01日</span>
+            </td>
+            <td colspan="5">人员流动：由 温州市大伟公路检测有限公司 变更为 温州市正诚工程质量检测有限公司</td>
+          </tr>
+        
+          <tr>
+            <td class="text_center">
+              <span>2015年12月01日</span>
+            </td>
+            <td colspan="5">从业场所变更：由  变更为 浙江省温州市龙湾区蒲州街道兴平路27号第1-3层</td>
+          </tr>
+        
+          <tr>
+            <td class="text_center">
+              <span>2019年08月26日</span>
+            </td>
+            <td colspan="5">人员流动：由 温州市正诚工程质量检测有限公司 变更为 温州中旭建设工程质量检测中心有限公司</td>
+          </tr>
+        
+          <tr>
+            <td class="text_center">
+              <span>2019年08月26日</span>
+            </td>
+            <td colspan="5">从业场所变更：由 浙江省温州市龙湾区蒲州街道兴平路27号第1-3层 变更为 温州市宽带路13号德丰综合大楼A幢201室南首</td>
+          </tr>
+        
+          <tr>
+            <td class="text_center">
+              <span>2019年09月23日</span>
+            </td>
+            <td colspan="5">继续教育：通过见证取样检测（通用）的继续教育考核</td>
+          </tr>
+        
+          <tr>
+            <td class="text_center">
+              <span>2021年07月26日</span>
+            </td>
+            <td colspan="5">增加专业类别：地基基础工程检测</td>
+          </tr>
+        
+          <tr>
+            <td class="text_center">
+              <span>2021年09月27日</span>
+            </td>
+            <td colspan="5">增加专业类别：主体结构工程现场检测</td>
+          </tr>
+        
+          <tr>
+            <td class="text_center">
+              <span>2021年09月28日</span>
+            </td>
+            <td colspan="5">增加专业类别：钢结构工程检测</td>
+          </tr>
+        
+          <tr>
+            <td class="text_center">
+              <span>2022年07月22日</span>
+            </td>
+            <td colspan="5">增加专业类别：市政桥梁检测</td>
+          </tr>
+        
+          <tr>
+            <td class="text_center">
+              <span>2022年12月07日</span>
+            </td>
+            <td colspan="5">机构名称变更：由 温州中旭建设工程质量检测中心有限公司 变更为 浙江辰旭检测科技有限公司</td>
+          </tr>
+        
+          <tr>
+            <td class="text_center">
+              <span>2023年03月20日</span>
+            </td>
+            <td colspan="5">增加专业类别：室内环境质量检测</td>
+          </tr>
+        
+          <tr>
+            <td class="text_center">
+              <span>2024年04月09日</span>
+            </td>
+            <td colspan="5">继续教育：完成 见证取样检测（房建）;见证取样检测（通用）中建筑材料及构配件部分的继续教育培训，专业类别 由见证取样检测（房建）;见证取样检测（通用） 改为 建筑材料及构配件</td>
+          </tr>
+        
+          <tr>
+            <td class="text_center">
+              <span>2024年04月09日</span>
+            </td>
+            <td colspan="5">继续教育：完成 见证取样检测（通用）中市政工程材料部分的继续教育培训，专业类别 由见证取样检测（通用） 改为 市政工程材料</td>
+          </tr>
+        
+          <tr>
+            <td class="text_center">
+              <span>2024年04月09日</span>
+            </td>
+            <td colspan="5">继续教育：完成 见证取样检测（通用）中道路工程部分的继续教育培训，专业类别 由见证取样检测（通用） 改为 道路工程</td>
+          </tr>
+        
+          <tr>
+            <td class="text_center">
+              <span>2024年04月09日</span>
+            </td>
+            <td colspan="5">继续教育：完成 主体结构工程现场检测中主体结构及装饰装修（主体结构）部分的继续教育培训，专业类别 由主体结构工程现场检测 改为 主体结构及装饰装修（主体结构）</td>
+          </tr>
+        
+          <tr>
+            <td class="text_center">
+              <span>2024年04月09日</span>
+            </td>
+            <td colspan="5">继续教育：完成 室内环境质量检测中主体结构及装饰装修（室内环境）部分的继续教育培训，专业类别 由室内环境质量检测 改为 主体结构及装饰装修（室内环境）</td>
+          </tr>
+        
+          <tr>
+            <td class="text_center">
+              <span>2024年04月09日</span>
+            </td>
+            <td colspan="5">继续教育：完成 地基基础工程检测中地基基础部分的继续教育培训，专业类别 由地基基础工程检测 改为 地基基础</td>
+          </tr>
+        
+          <tr>
+            <td class="text_center">
+              <span>2024年04月09日</span>
+            </td>
+            <td colspan="5">继续教育：完成 钢结构工程检测中钢结构部分的继续教育培训，专业类别 由钢结构工程检测 改为 钢结构</td>
+          </tr>
+        
+          <tr>
+            <td class="text_center">
+              <span>2024年04月09日</span>
+            </td>
+            <td colspan="5">继续教育：完成 市政桥梁检测中桥梁及地下工程部分的继续教育培训，专业类别 由市政桥梁检测 改为 桥梁及地下工程</td>
+          </tr>
+        
+          <tr>
+            <td class="text_center">
+              <span>2025年11月12日</span>
+            </td>
+            <td colspan="5">继续教育：完成技能专题培训，获得3学分</td>
+          </tr>
+        
+      </tbody>
+    </table>
+  </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll(".toggle-btn");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function() {
+            const targetId = this.getAttribute("data-target");
+            const content = document.getElementById(targetId);
+            const tip=this.querySelector("tr th span")
+            if (content) {
+                if (content.style.display === "none") {
+                    content.style.display = "table-row-group";
+                    tip.textContent =" (点击收起)";
+                } else {
+                    content.style.display = "none";
+                    tip.textContent = " (点击展开)";
+                }
+            }
+        });
+    });
+});
+</script>
+</body></html>0.
